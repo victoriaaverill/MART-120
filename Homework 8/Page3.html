@@ -1,0 +1,41 @@
+<html>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>function validateForm()
+    { var x = document.forms["Form"]["Email Address"].value;
+        if (x == "") {
+          document.getElementById("txtEmail").style.backgroundColor="red";
+          document.getElementById("txtEmail").focus();
+          return false;
+        } 
+        var y = document.forms["Form"]["Name"].value;
+        if (y == "") {
+          document.getElementById("txtName").style.backgroundColor="red";
+          document.getElementById("txtName").focus(); 
+            return false;
+        }
+        var z = document.forms["Form"]["I agree"].checked;
+        var zz = document.forms["Form"]["I disagree"].checked;
+        if (z == false && zz== false) {
+          document.getElementById("terms").style.backgroundColor="red";
+          return false;
+        }
+    
+      }</script>
+
+<Title> Third Page </title>
+<h1> Contact Us </h1>
+<form name="Form" onsubmit="return validateForm()"">
+Name<input type="text" name=Name cols=15 rows=1 id="txtName">  
+Email Address<input type="text" id="txtEmail" name="Email Address" cols=15 rows=1 >
+<h3> 
+Terms of Agreement</h3>
+<div id=terms>
+    I agree <input type="checkbox" name="I agree" value=1 id="agree">
+    I Disagree<input type="checkbox" name="I disagree" value=1 id="disagree">
+    </div>
+    <br> 
+    <br> 
+<input type="submit">
+</form>
+<a href="file:///Users/toriaverill/Documents/MART%20120/My%20Best%20Folder/Homework%206/Homework6.html">Home Page</a>
